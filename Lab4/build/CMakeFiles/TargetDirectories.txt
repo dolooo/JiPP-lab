@@ -1,0 +1,2 @@
+C:/Users/sdole/OneDrive/Desktop/3 sem/jipp/jipp_lab/Lab4/build/CMakeFiles/edit_cache.dir
+C:/Users/sdole/OneDrive/Desktop/3 sem/jipp/jipp_lab/Lab4/build/CMakeFiles/rebuild_cache.dir
