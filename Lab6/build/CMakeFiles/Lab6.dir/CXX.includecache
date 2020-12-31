@@ -1,0 +1,54 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/HRMS.h
+employee.h
+../include/employee.h
+iostream
+-
+string
+-
+sstream
+-
+fstream
+-
+algorithm
+-
+map
+-
+list
+-
+vector
+-
+
+../include/employee.h
+iostream
+-
+string
+-
+fstream
+-
+
+C:/Users/sdole/OneDrive/Desktop/3 sem/jipp/jipp_lab/Lab6/src/HRMS.cpp
+HRMS.h
+C:/Users/sdole/OneDrive/Desktop/3 sem/jipp/jipp_lab/Lab6/src/HRMS.h
+
+C:/Users/sdole/OneDrive/Desktop/3 sem/jipp/jipp_lab/Lab6/src/employee.cpp
+employee.h
+C:/Users/sdole/OneDrive/Desktop/3 sem/jipp/jipp_lab/Lab6/src/employee.h
+
+C:/Users/sdole/OneDrive/Desktop/3 sem/jipp/jipp_lab/Lab6/src/main.cpp
+employee.h
+C:/Users/sdole/OneDrive/Desktop/3 sem/jipp/jipp_lab/Lab6/src/employee.h
+HRMS.h
+C:/Users/sdole/OneDrive/Desktop/3 sem/jipp/jipp_lab/Lab6/src/HRMS.h
+vector
+-
+conio.h
+-
+
