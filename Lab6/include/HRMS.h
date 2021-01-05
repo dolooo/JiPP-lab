@@ -1,6 +1,7 @@
 #ifndef HRMS_h
 #define HRMS_h
 #include "employee.h"
+#include <exception>
 #include <iostream>
 #include <string>
 #include <sstream>
