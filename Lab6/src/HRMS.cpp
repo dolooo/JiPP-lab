@@ -4,6 +4,25 @@ void HRMS::add(Employee employee, string departmentId, double salary)
 {
 	string employeeid = employee.getId();
 
+	if (salary < 0)
+	{
+		throw invalid_argument("Podane zarobki powinny byc wieksze od 0\n");
+	}
+
+	if (departmentId != employee.getDid())
+	{
+		throw invalid_argument("ID dzialu rozni sie od ID dzialu podanego pracownika\n");
+	}
+
+	list<string>::iterator it;
+	for (it = employees_id.begin(); it != employees_id.end(); it++)
+	{
+		if (*it == employeeid)
+		{
+			throw invalid_argument("Pracownik o podanym numerze ID juz istnieje\n");
+		}
+	}
+
 	employees_id.push_front(employeeid);
 	this->employees[employeeid] = employee;
 	this->id_did [employeeid] = departmentId;
@@ -13,6 +32,7 @@ void HRMS::add(Employee employee, string departmentId, double salary)
 void HRMS::printDepartment(string departmentId)
 {
 	map<string, string>::iterator it;
+	int i = 0;
 
 	if (departmentId=="1") { cout << "-------Administration------" << endl; }
 	else if (departmentId == "2") { cout << "-----Health and Safety-----" << endl; }
@@ -26,19 +46,36 @@ void HRMS::printDepartment(string departmentId)
 		if (it->second == departmentId)
 		{ 
 			cout << this->employees[it->first].getId() << " " << this->employees[it->first].getName() << " " << this->employees[it->first].getSurname() << endl;
+			i++;
 		}
+	}
+
+	if (i == 0)
+	{
+		throw invalid_argument("Nie istnieje ID dzialu o podanym numerze\n");
 	}
 }
 
 void HRMS::changeSalary(string employeeId, double salary)
 {
-	list<string>::iterator it;
-	int counter = 0;
-	for (it =employees_id.begin() ; it != employees_id.end(); it++)
+	if (salary < 0)
 	{
-		if (*it == employeeId)
-			counter++;
+		throw invalid_argument("Podane zarobki powinny byc wieksze od 0\n");
 	}
+
+	list<string>::iterator it;
+
+    int i = 0;
+    for (it = employees_id.begin(); it != employees_id.end(); it++)
+    {
+        if (*it == employeeId)
+            i++;
+    }
+    if (i == 0)
+    {
+        throw invalid_argument("Pracownik o podanym numerze ID juz istnieje\n");
+    }
+
 	this->salaries[employeeId] = salary;
 }
 
