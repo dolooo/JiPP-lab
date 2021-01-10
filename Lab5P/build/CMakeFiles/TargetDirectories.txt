@@ -1,0 +1,3 @@
+C:/Users/sdole/OneDrive/Desktop/Lab5P/build/CMakeFiles/Lab5P.dir
+C:/Users/sdole/OneDrive/Desktop/Lab5P/build/CMakeFiles/edit_cache.dir
+C:/Users/sdole/OneDrive/Desktop/Lab5P/build/CMakeFiles/rebuild_cache.dir
